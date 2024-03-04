@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="logo_principal.png" alt="Icono">
+                </div>
+                <div class="botonInformativo">
+                    <button class="boton-original" id="boton-informativo" data-toggle="modal"
+                        data-target="#ModalImfomativo"><i class="fa-regular fa-circle-question"></i>
+                        Información</button>
+                    <button class="boton-hamburguesa" >&#9776;</button>
+                </div>
+
+            </nav>
+        </header>
+
+        <main>
+            <div id="login-form" class="form_main">
+                <p class="heading">Iniciar Sesión</p>
+                <div class="inputContainer">
+                    <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z">
+                        </path>
+                    </svg>
+                    <input type="text" class="inputField" id="UsuarioLogueo" placeholder="Usuario">
+                </div>
+
+                <div class="inputContainer">
+                    <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z">
+                        </path>
+                    </svg>
+                    <input type="password" class="inputField" id="ContraseñaLogueo" placeholder="Contraseña">
+                </div>
+
+                <div class="inputContainer">
+                    <p class="error escondido">Error al iniciar sesión</p>
+                </div>
+
+
+                <button type="button" class="buttonIniciarSesion" id="buttonlogueo" onclick="logueo()">Iniciar sesión</button>
+                <p>Sin cuenta<a class="forgotLink" href="/Register">registrate</a></p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="column">
+                <h3><i class="fa-solid fa-circle-info"></i> Quienes somos</h3>
+                <p>
+                    Plataforma especializada en
+                    registro y control de datos
+                    personales.
+                </p>
+            </div>
+
+            <div class="column">
+                <h3><i class="fa-solid fa-location-dot"></i> Ubicación</h3>
+                <p class="textoInformativoFooter">Calle 16c bis #97.</p>
+            </div>
+
+            <div class="column">
+                <h3><i class="fa-solid fa-phone"></i> Correo de soporte</h3>
+                <p class="textoInformativoFooter">soporteRegistroFlex@gmail.com</p>
+            </div>
+        </footer>
+    </div>
+
+    
+    <div class="modal fade" id="ModalImfomativo" tabindex="-1" role="dialog" aria-labelledby="ModalImfomativo"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Información</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>¡Bienvenido a nuestro aplicativo!</h4>
+                    <p>Si ya cuentas con un usuario y contraseña, por favor, inicia sesión para acceder a todas las
+                        funcionalidades de nuestra plataforma.
+
+                        En caso de que encuentres algún problema durante el proceso de inicio de sesión o necesites
+                        asistencia, no dudes en contactar a nuestro equipo de soporte. Estamos aquí para ayudarte.
+
+                        Correo de Soporte:
+                    <h6>soporteRegistroFlex@gmail.com</h6>
+
+                    Gracias por confiar en nosotros. ¡Esperamos que tengas una experiencia excelente en nuestro
+                    aplicativo!</p>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="login.js"></script>
+    <script src="slim.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="sweetalert2@11.JS"></script>
+    <script src="kit.fontawesome.com/ed4c3ffe0d.js"></script>
+</body>
+
+</html>
