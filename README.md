@@ -16,7 +16,7 @@ Paso 5: Configuración de variables de entorno
 En El archivo .env en la raíz del proyecto y configure las siguientes variables:
 
 env
-Copy code
+
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=@dm!n!str@d0r
